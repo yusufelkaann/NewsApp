@@ -6,13 +6,23 @@ class News {
   final String publishedAt;
   final String content;
 
-  News(this.title, this.description, this.url, this.urlToImage, this.publishedAt, this.content);
+  News({
+    required this.title,
+    required this.description,
+    required this.url,
+    required this.urlToImage,
+    required this.publishedAt,
+    required this.content,
+  });
 
-  News.fromJson(Map<String, dynamic> json)
-    : title = json['title'],
-      description = json['description'],
-      url = json['url'],
-      urlToImage = json['urlToImage'],
-      publishedAt = json['publishedAt'],
-      content = json['content'];
+  factory News.fromJson(Map<String, dynamic> json) {
+    return News(
+      title: json['title'] ?? 'No Title',
+      description: json['description'] ?? 'No Description',
+      url: json['url'] ?? '',
+      urlToImage: json['urlToImage'] ?? '',
+      publishedAt: json['publishedAt'] ?? '',
+      content: json['content'] ?? 'No Content',
+    );
+  }
 }
