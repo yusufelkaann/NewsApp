@@ -23,11 +23,13 @@ class CustomBottomNavigationBar extends StatelessWidget {
             BottomNavigationBarItem(
               
               icon: Icon(Icons.home, color: Theme.of(context).colorScheme.tertiary,),
+              label: "Home",
               
               
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.search, color: Theme.of(context).colorScheme.tertiary,),
+              label: "Search",
               
             ),
           ],
