@@ -17,19 +17,17 @@ class CustomBottomNavigationBar extends StatelessWidget {
           onTap: (index) => _handleTabChange(context, index),
           unselectedItemColor: Theme.of(context).colorScheme.tertiary,
           selectedItemColor: Theme.of(context).colorScheme.primary,
-          unselectedLabelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
-          selectedLabelStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
+          
           
           items: [
             BottomNavigationBarItem(
               
               icon: Icon(Icons.home, color: Theme.of(context).colorScheme.tertiary,),
-              label: "Home",
+              
               
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.search, color: Theme.of(context).colorScheme.tertiary,),
-              label: 'Search' ,
               
             ),
           ],
